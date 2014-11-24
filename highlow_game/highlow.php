@@ -13,22 +13,33 @@ do {
 
 	// Get the input from user
 
-	$guess = fgets(STDIN);
+	$guess = trim(fgets(STDIN));
 
-	if ($guess > $random_number) {
 
-    echo "LOWER\n";
+	if (is_numeric($guess)) {
 
-	}elseif ($guess < $random_number) {
+		if ($guess > $random_number) {
+
+    	echo "LOWER\n";
+
+		} elseif ($guess < $random_number) {
    
-    echo "HIGHER\n";
+    	echo "HIGHER\n";
 
-	} elseif ($guess = $random_number) {
+		} elseif ($guess = $random_number) {
 
-	echo "GOOD GUESS!\n";
+		echo "GOOD GUESS!\n";
+		}
+
 	}
 
-	$guess_number++;
+	else {
+
+		echo "Seriously, enter a NUMBER.\n";
+	
+	}
+
+		$guess_number++;
 
 } while ($guess != $random_number);
 
