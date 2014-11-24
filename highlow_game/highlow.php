@@ -8,7 +8,9 @@ echo "Okay, let's play \"Guess a Number!\"\n";
 
 if ($argc == 3) {
 
-	$random_number = mt_rand($argv[1],$argv[2]);
+	$random_number = mt_rand($argv[1] , $argv[2]);
+
+	echo "Guess the random number between $argv[1] and $argv[2].\n";
     
 	} else {
 		echo "Give me the range of numbers to use.\n";
@@ -22,6 +24,8 @@ if ($argc == 3) {
 		$high_number = trim(fgets(STDIN));
 
 		$random_number = mt_rand($low_number, $high_number);
+
+		echo "Guess the random number between $low_number and $high_number.\n";
 }
 
 do {
