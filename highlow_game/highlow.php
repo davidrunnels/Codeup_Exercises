@@ -2,22 +2,14 @@
 
 //High Low game
 
-// Generate random number
-
-// int rand(1,100);
-
-// Assign random number
-
 $random_number = mt_rand(1,100);
-
-
-// user gets high low feedbak
+$guess_number = 1;
 
 do {
 
 	// user guess at number
 
-	fwrite(STDOUT, 'Guess? ');
+	fwrite(STDOUT, 'Guess a number. ');
 
 	// Get the input from user
 
@@ -36,4 +28,8 @@ do {
 	echo "GOOD GUESS!\n";
 	}
 
+	$guess_number++;
+
 } while ($guess != $random_number);
+
+	echo "It took you $guess_number guesses.\n";
