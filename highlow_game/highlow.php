@@ -8,7 +8,7 @@
 
 // Assign random number
 
-$random_number = rand(1,100);
+$random_number = mt_rand(1,100);
 
 
 // user gets high low feedbak
