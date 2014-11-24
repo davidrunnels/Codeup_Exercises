@@ -2,33 +2,54 @@
 
 //High Low game
 
-$random_number = mt_rand(1,100);
-$guess_number = 1;
+$guess_number = 0;
+
+echo "Okay, let's play \"Guess a Number!\"\n";
+
+if ($argc == 3) {
+
+	$random_number = mt_rand($argv[1],$argv[2]);
+    
+	} else {
+		echo "Give me the range of numbers to use.\n";
+
+		fwrite(STDOUT, "Enter the low number: ");
+
+		$low_number = trim(fgets(STDIN));
+
+		fwrite(STDOUT, "Enter the high number: ");
+
+		$high_number = trim(fgets(STDIN));
+
+		$random_number = mt_rand($low_number, $high_number);
+}
 
 do {
 
 	// user guess at number
 
-	fwrite(STDOUT, 'Guess a number. ');
+	fwrite(STDOUT, 'Guess a number: ');
 
 	// Get the input from user
 
 	$guess = trim(fgets(STDIN));
+
+	$guess_number++;
 
 
 	if (is_numeric($guess)) {
 
 		if ($guess > $random_number) {
 
-    	echo "LOWER\n";
+    	echo "Lower...\n";
 
 		} elseif ($guess < $random_number) {
    
-    	echo "HIGHER\n";
+    	echo "Higher...\n";
 
 		} elseif ($guess = $random_number) {
 
-		echo "GOOD GUESS!\n";
+		echo "You got it!\n";
 		}
 
 	}
@@ -39,8 +60,7 @@ do {
 	
 	}
 
-		$guess_number++;
-
 } while ($guess != $random_number);
 
 	echo "It took you $guess_number guesses.\n";
+
