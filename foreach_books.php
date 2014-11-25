@@ -25,7 +25,7 @@ $books = array(
 
 
 foreach ($books as $title => $value) {
-	echo "\n$title" . PHP_EOL;
+	echo PHP_EOL . $title . PHP_EOL;
 
 		foreach ($value as $key => $attribute) {
 			echo "$key: $attribute" . PHP_EOL;
