@@ -12,17 +12,17 @@ do {
 
 } while (!is_numeric($start_number));
 
+//	Exercise step three
+// if(!is_numeric($start_number)) {
+//	$start_number = 1;
+// }
+
 do {
 
 	fwrite(STDOUT, "Enter the ending number: ");
 
 	$end_number = trim(fgets(STDIN));
 
-//	Exercise step three
-// if(!is_numeric($end_number)) {
-//	$end_number = 1;
-// }
-	
 } while (!is_numeric($end_number));
 
 do {
