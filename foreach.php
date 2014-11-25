@@ -6,5 +6,13 @@ foreach ($things as $value) {
     echo gettype($value) . PHP_EOL;
 }
 
+echo "\n";
+
+foreach ($things as $value) {
+	if (is_scalar($value))
+		echo $value . PHP_EOL;
+}
+
+echo "\n";
 
 
