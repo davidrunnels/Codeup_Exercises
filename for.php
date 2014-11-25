@@ -18,6 +18,11 @@ do {
 
 	$end_number = trim(fgets(STDIN));
 
+//	Exercise step three
+// if(!is_numeric($end_number)) {
+//	$end_number = 1;
+// }
+	
 } while (!is_numeric($end_number));
 
 do {
