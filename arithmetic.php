@@ -27,6 +27,9 @@ function multiply($a, $b) {
 function divide($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
     	echo $a / $b;
+            if ($a == 0 || $b == 0) {
+                echo "You cannot divide by zero.";
+            }
 } else {
         echo "ERROR: Both arguments must be numbers\n";
     }
@@ -35,6 +38,9 @@ function divide($a, $b) {
 function modulus($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
 		echo $a % $b;
+         if ($a == 0 || $b == 0) {
+                echo "You cannot divide by zero.";
+        }
 } else {
         echo "ERROR: Both arguments must be numbers\n";
     }
