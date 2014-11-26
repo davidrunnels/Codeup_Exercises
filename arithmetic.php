@@ -1,11 +1,16 @@
 <?php
 
+function error_message($a, $b) {
+    echo "ERROR: Both arguments must be numbers.";
+    echo "\$a = $a, and \$b = $b.";
+}
+
+
 function add($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
     	echo $a + $b;
 } else {
-        echo "ERROR: Both arguments must be numbers\n";
-        echo "You tried to add {$a} and {$b}.";
+        error_message($a, $b);
     }
 }
 
@@ -13,8 +18,7 @@ function subtract($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
     	echo $a - $b;
 } else {
-        echo "ERROR: Both arguments must be numbers\n";
-        echo "You tried to subtract {$b} from {$a}.";
+    error_message($a, $b);
     }
 }
 
@@ -22,8 +26,7 @@ function multiply($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
     	echo $a * $b;
 } else {
-        echo "ERROR: Both arguments must be numbers\n";
-        echo "You tried to multiply {$a} and {$b}.";
+        error_message($a, $b);
     }
 }
 
@@ -32,7 +35,7 @@ function divide($a, $b) {
     	echo $a / $b;
             if ($a == 0 || $b == 0) {
                 echo "You cannot divide by zero.\n";
-                echo "You tried to divide {$b} by {$a}.";
+                error_message($a, $b);
             }
 } else {
         echo "ERROR: Both arguments must be numbers\n";
@@ -48,9 +51,10 @@ function modulus($a, $b) {
         }
 } else {
         echo "ERROR: Both arguments must be numbers\n";
-        echo "You entered the arguements {gettype($a)} and {gettype($b)}.";
+
     }
 }
+
 
 echo add(5, 4) . PHP_EOL;
 echo subtract(6, 4) . PHP_EOL;
