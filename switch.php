@@ -33,6 +33,8 @@
      case 7:
      	echo "Easy like a Sunday morning." . PHP_EOL;
      	break;
+     default:
+     	echo "The space time continuum has torn!"
 
 // Test results
  }
