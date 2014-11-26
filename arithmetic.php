@@ -8,7 +8,7 @@ function error_message($a, $b) {
 
 function add($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
-    	echo $a + $b;
+    	return $a + $b;
 } else {
         error_message($a, $b);
     }
@@ -16,7 +16,7 @@ function add($a, $b) {
 
 function subtract($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
-    	echo $a - $b;
+    	return $a - $b;
 } else {
     error_message($a, $b);
     }
@@ -24,7 +24,7 @@ function subtract($a, $b) {
 
 function multiply($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
-    	echo $a * $b;
+    	return $a * $b;
 } else {
         error_message($a, $b);
     }
@@ -32,7 +32,7 @@ function multiply($a, $b) {
 
 function divide($a, $b) {
     if (is_numeric($a) && is_numeric($b)) {
-    	echo $a / $b;
+    	return $a / $b;
             if ($a == 0 || $b == 0) {
                 echo "You cannot divide by zero.\n";
                 error_message($a, $b);
@@ -44,7 +44,7 @@ function divide($a, $b) {
 
 function modulus($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
-		echo $a % $b;
+		return $a % $b;
          if ($a == 0 || $b == 0) {
                 echo "You cannot divide by zero.\n";
                 echo "You tried to find the modulus of {$a} and {$b}.";
