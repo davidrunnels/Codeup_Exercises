@@ -10,15 +10,12 @@ function humanizedlist($string, $sorting = false) {
 		$array = explode(', ', $string);
 		// print_r($array);
 
-		if($sorting){
-			natcasesort($array);
+		if($sorting == true){
+			asort($array);
 			// print_r($array);
 		}
 		
 		$last_item = array_pop($array);
-		//$new_last_item = 'and '. $last_item;
-		//array_push($array, $new_last_item);
-		
 		$new_string = implode(', ', $array);
 		
 		return "{$new_string} and {$last_item}";
