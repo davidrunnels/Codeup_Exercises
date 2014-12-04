@@ -10,7 +10,7 @@ function humanizedlist($string, $sorting = false) {
 		$array = explode(', ', $string);
 		// print_r($array);
 
-		if($sorting == true){
+		if($sorting){
 			asort($array);
 			// print_r($array);
 		}
