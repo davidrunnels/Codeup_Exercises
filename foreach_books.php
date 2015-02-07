@@ -31,5 +31,5 @@ foreach ($books as $title => $value) {
 			echo "$key: $attribute" . PHP_EOL;
 		}
 
-	}
+}
 

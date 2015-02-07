@@ -12,11 +12,6 @@ do {
 
 } while (!is_numeric($start_number));
 
-//	Exercise step three
-// if(!is_numeric($start_number)) {
-//	$start_number = 1;
-// }
-
 do {
 
 	fwrite(STDOUT, "Enter the ending number: ");
@@ -33,10 +28,10 @@ do {
 
 } while (!is_numeric($increment_number));
 
-if (!$increment_number) {
+	if (!$increment_number) {
 
-	$increment_number = 1;
-}
+		$increment_number = 1;
+	}
 
 for ($i = $start_number; $i <= $end_number; $i += $increment_number) {
 	

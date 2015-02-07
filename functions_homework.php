@@ -1,17 +1,5 @@
 <?php
 
-// Fix Those Functions!
-
-/*  We have some functions pre-defined for us, but they aren't working...
-
-    Can you figure out why?  Fix those functions and get this code to work!
-
-    Each function should accept some input and return some data.
-
-    Each function has one common mistake, preventing it from working.
-
-*/
-
 $number1 = 10;
 $number2 = 7;
 
@@ -21,9 +9,6 @@ $string2 = 'franklin';
 $array1 = ['banana', 'orange', 'mango', 'kiwi'];
 $array2 = ['widget', 'wodget', 'wadget', 'wocket'];
 
-/* -------------------------------- */
-
-// This function accepts a number, and returns it's value squared.
 function squareThis($number) {
     
     $numSquared = $number * $number;
@@ -32,9 +17,6 @@ function squareThis($number) {
 
 echo squareThis($number1) . PHP_EOL;
 
-/* -------------------------------- */
-
-// This function accepts a string, and returns that string with an uppercase first letter.
 function upperCaseFirst($string) {
 
     $string = ucfirst($string);
@@ -43,11 +25,6 @@ function upperCaseFirst($string) {
 
 echo upperCaseFirst($string1) . ' ' . upperCaseFirst($string2) . PHP_EOL;
 
-/* -------------------------------- */
-
-/* -------------------------------- */
-
-// This function accepts a string and returns an array of letters.
 function createArrayOfLetters($string) {
     $array = str_split($string);
     return $array;
@@ -55,16 +32,9 @@ function createArrayOfLetters($string) {
 
 print_r(createArrayOfLetters($string1));
 
-/* -------------------------------- */
-
-/* -------------------------------- */
-
-// This function accepts two arrays, and returns one merged array.
 function mergeTheseArrays($first_array, $second_array) {
     $mergedArray = array_merge($first_array, $second_array);
     return $mergedArray;
 }
 
 print_r(mergeTheseArrays($array1, $array2));
-
-/* -------------------------------- */ 

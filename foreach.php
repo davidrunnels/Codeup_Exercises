@@ -16,14 +16,14 @@ foreach ($things as $value) {
 echo "\n";
 
 foreach ($things as $value) {
+	echo $things . PHP_EOL;
+
+	if (is_array($things)) {
+
+		foreach ($things as $value) {
 		echo $things . PHP_EOL;
-
-		if (is_array($things)) {
-
-			foreach ($things as $value) {
-			echo $things . PHP_EOL;
-			}
 		}
+	}
 
 }
 
